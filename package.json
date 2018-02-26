@@ -1,0 +1,31 @@
+{
+  "name": "fireapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-tools": "^3.17.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",    
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node_modules/.bin/firebase serve --only functions,hosting",
+    "serve-hosting": "node_modules/.bin/firebase serve --only hosting",
+    "build": "node_modules/.bin/webpack",
+    "build-prod": "node_modules/.bin/webpack -p",
+    "build-hosting" : "npm run build && cp src/bundle.js public/bundle.js && cp src/index.html public/index.html",
+    "build-hosting-prod" : "npm run build-prod && cp src/bundle.js public/bundle.js && cp src/index.html public/index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
